@@ -11,7 +11,7 @@
 @interface TDCNotificationUtil : NSObject
 
 /**
- 发送一个可以携带参数的通知
+ 注册一个可以携带参数的通知
 
  @param notificationName 通知标志（唯一区分字符串）
  @param observer         通知接受对象
@@ -19,6 +19,15 @@
  @param object           发送对象
  */
 + (void)registerNotification:(NSString *)notificationName Observer:(id)observer Selector:(SEL)selector object:(id) object;
+
+
+/**
+ 发送一个可以携带参数的通知
+
+ @param notificationName 通知标志（唯一区分字符串）
+ @param object           发送对象
+ */
++ (void)postNotificationName:(NSString *)notificationName withObject:(id)object;
 
 /**
  注销通知

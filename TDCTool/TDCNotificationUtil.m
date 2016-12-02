@@ -14,6 +14,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:observer selector:selector name:notificationName object:object];
 }
 
++ (void)postNotificationName:(NSString *)notificationName withObject:(id)object
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:object];
+}
+
 #pragma mark 移除通知监听
 + (void)unRegisterNotification:(NSString *)notificationName Observer:(id)observer
 {

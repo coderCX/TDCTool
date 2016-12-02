@@ -1,2 +1,2 @@
-# TDCTool
-今日城市常用方法封装
+# TDCCommonCategory
+工具类

@@ -10,6 +10,7 @@
 #define TDCTool_h
 
 #import "TDCNotificationUtil.h"
+#import "TDCAlertController.h"
 
 /**
  系统日志

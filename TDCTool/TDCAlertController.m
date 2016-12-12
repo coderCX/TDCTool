@@ -31,6 +31,7 @@
  背景
  */
 @property (weak, nonatomic) IBOutlet UIView *backView;
+@property (weak, nonatomic) IBOutlet UIButton *cancleButton;
 
 @property (weak, nonatomic) IBOutlet UIView *titleBackView;
 @property (weak, nonatomic) IBOutlet UIButton *sureButton;
@@ -116,6 +117,12 @@
     _titleLabel.textColor = topTitleColor;
 }
 
+- (void)setCancelButtonTitle:(NSString *)cancelButtonTitle
+{
+    _cancelButtonTitle = cancelButtonTitle;
+    [_cancleButton setTitle:cancelButtonTitle forState:UIControlStateNormal];
+}
+
 - (void)setTopTitleViewColor:(UIColor *)topTitleViewColor
 {
     _topTitleViewColor = topTitleViewColor;
@@ -142,6 +149,11 @@
 - (IBAction)cancelClick:(id)sender
 {
     [self dismissSelf];
+    
+    if (self.alertBlock)
+    {
+        self.alertBlock(0);
+    }
 }
 
 - (IBAction)sureClick:(id)sender
@@ -150,7 +162,7 @@
     
     if (self.alertBlock)
     {
-         self.alertBlock();
+         self.alertBlock(1);
     }
    
 }
@@ -161,7 +173,7 @@
     
     if (self.alertBlock)
     {
-        self.alertBlock();
+        self.alertBlock(1);
     }
 }
 

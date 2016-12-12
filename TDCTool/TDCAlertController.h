@@ -13,7 +13,7 @@
 /**
  点击确定按钮之后触发这个Block
  */
-typedef void(^ AlertBlcok)();
+typedef void(^ AlertBlcok)(NSInteger tag);
 
 
 @interface TDCAlertController : UIViewController
@@ -43,6 +43,11 @@ typedef void(^ AlertBlcok)();
  顶部title背景色
  */
 @property (nonatomic, strong) UIColor *topTitleViewColor;
+
+/**
+ 关闭按钮文字
+ */
+@property (nonatomic, copy) NSString *cancelButtonTitle;
 
 /**
  消息内容

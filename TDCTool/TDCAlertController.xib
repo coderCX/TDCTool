@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="backView" destination="GED-ZM-TCC" id="I9y-06-1hr"/>
                 <outlet property="backViewH" destination="PmD-AR-El1" id="7UW-Kh-BZ6"/>
+                <outlet property="cancleButton" destination="E0Q-yX-eez" id="o1J-VR-HNV"/>
                 <outlet property="contentLabel" destination="Thb-ey-Tb1" id="vd2-MY-Csx"/>
                 <outlet property="singleButton" destination="x40-j4-N0X" id="lMb-xf-oNQ"/>
                 <outlet property="sureButton" destination="0pf-7b-F3Q" id="5hw-pu-CV4"/>

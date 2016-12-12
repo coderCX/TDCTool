@@ -35,7 +35,7 @@ NSLog(__VA_ARGS__)
  GCD  几秒后执行某个方法
  不可控
  */
-#define AFTER(time, block) dispatch_after(dispatch_time(DISPATCH_TIME_NOW, time*NSEC_PER_SEC), dispatch_get_main_queue(), block)
+#define TDCAFTER(time, block) dispatch_after(dispatch_time(DISPATCH_TIME_NOW, time*NSEC_PER_SEC), dispatch_get_main_queue(), block)
 
 
 // iphone4s适配用
@@ -57,5 +57,23 @@ NSLog(__VA_ARGS__)
  block中弱引用self
  */
 #define WEAKSELF typeof(self) __weak weakSelf = self;
+
+/**
+ 返回应用代理AppDelegate实例对象
+ */
+#define TDCApp_Delegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+/**
+ 沙盒存储
+ */
+#define TDCUserDefaults    [NSUserDefaults standardUserDefaults]
+
+
+/**
+ 正则表达式
+ */
+#define TDCREGEX_MOBILE        @"^[1]([3|4|5|7|8][0-9]{1})[0-9]{8}$"
+#define TDCREGEX_EMAIL         @"^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$"
+#define TDCREGEX_PASSWORD      @"^[a-z0-9A-Z]{6,20}$"
 
 #endif /* TDCTool_h */

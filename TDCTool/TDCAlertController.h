@@ -50,6 +50,11 @@ typedef void(^ AlertBlcok)(NSInteger tag);
 @property (nonatomic, copy) NSString *cancelButtonTitle;
 
 /**
+ 确认按钮文字
+ */
+@property (nonatomic, copy) NSString *sureButtonTitle;
+
+/**
  消息内容
  */
 @property (nonatomic, copy) NSString *message;

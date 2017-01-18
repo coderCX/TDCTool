@@ -135,6 +135,11 @@
     [_sureButton setTitleColor:sureButtonTitleColor forState:UIControlStateNormal];
 }
 
+- (void)setSureButtonTitle:(NSString *)sureButtonTitle{
+    _sureButtonTitle = sureButtonTitle;
+    [_sureButton setTitle:sureButtonTitle forState:UIControlStateNormal];
+}
+
 - (void)setMaskViewColor:(UIColor *)maskViewColor
 {
     _maskViewColor = maskViewColor;
